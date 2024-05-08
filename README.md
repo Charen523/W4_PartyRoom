@@ -1,7 +1,7 @@
 <br/>
 <br/>
 
-# <p align="center"> ** W4_PartyRoom **  </p>
+# <p align="center"> **W4_PartyRoom**  </p>
 
 ##### <p align="center"> <b> 내일 배움 캠프 4주차 개인프로젝트 </b>
 
