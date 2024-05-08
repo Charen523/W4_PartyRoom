@@ -22,7 +22,7 @@
 
  `Info` **Unity를 활용한 메타버스 공간 만들기**
 
- `Stack` **C#, Unity-2022.3.17f, Visual Studio2022-17.9.6 **   
+ `Stack` C#, Unity-2022.3.17f, Visual Studio2022-17.9.6   
 
  `Made by` **정승연** 
  
