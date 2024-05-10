@@ -36,7 +36,7 @@ public class TopDownMovement : MonoBehaviour
 
     private void ApplyMovement(Vector2 direction)
     {
-        direction = direction * 5;
+        direction = direction * 5; //5는 속도 보정치로, 변수로 대체되어야 함.
 
         movementRigidbody.velocity = direction;
     }
