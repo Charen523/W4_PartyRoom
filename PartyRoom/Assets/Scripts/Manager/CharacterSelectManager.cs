@@ -6,8 +6,8 @@ using UnityEngine.UI;
 public class CharacterSelectManager : MonoBehaviour
 {
     public GameObject[] characters;
-
     public GameObject activeSelect;
+    public GameObject player;
 
     public Animator selectPanelAnim;
 
@@ -53,8 +53,9 @@ public class CharacterSelectManager : MonoBehaviour
             playerButtons[i].interactable = false;
         }
 
-        Debug.Log(selectedPlayer.name);
         selectedPlayer.transform.SetAsLastSibling();
-        PlayerManager.Instance.characterImagePath = selectedPlayer.name;
+
+        //애니메이션과 연결할 폴더 이름 변경
+        player.GetComponent<PlayerStatHandler>().setCharacterImage(selectedPlayer.name);
     }
 }
