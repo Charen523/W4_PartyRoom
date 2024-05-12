@@ -444,7 +444,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 493985770}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1423505672}
+        m_TargetAssemblyTypeName: CharacterPanel, Assembly-CSharp
+        m_MethodName: OnChoosePlayer
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 493985768}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &503023775
 GameObject:
   m_ObjectHideFlags: 0
@@ -774,7 +786,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 699085832}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1423505672}
+        m_TargetAssemblyTypeName: CharacterPanel, Assembly-CSharp
+        m_MethodName: OnChoosePlayer
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 699085830}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &794748976
 GameObject:
   m_ObjectHideFlags: 0
@@ -1083,7 +1107,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 858994210}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1423505672}
+        m_TargetAssemblyTypeName: CharacterPanel, Assembly-CSharp
+        m_MethodName: OnChoosePlayer
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 858994208}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &947169973
 GameObject:
   m_ObjectHideFlags: 0
@@ -1396,13 +1432,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: 73290ff88e818ca4ca8c6660470cf2e3, type: 3}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 1423505672}
+        m_TargetAssemblyTypeName: CharacterPanel, Assembly-CSharp
+        m_MethodName: OnChoosePlayer
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgument: {fileID: 1383483012}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1519,8 +1555,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73290ff88e818ca4ca8c6660470cf2e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characters: []
-  activeSelect: {fileID: 0}
+  characters:
+  - {fileID: 1383483012}
+  - {fileID: 493985768}
+  - {fileID: 2136820737}
+  - {fileID: 699085830}
+  - {fileID: 858994208}
+  - {fileID: 1321155670}
+  activeSelect: {fileID: 1321155673}
   selectPanelAnim: {fileID: 1423505671}
 --- !u!1 &1466220630
 GameObject:
@@ -1771,7 +1813,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2136820739}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1423505672}
+        m_TargetAssemblyTypeName: CharacterPanel, Assembly-CSharp
+        m_MethodName: OnChoosePlayer
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2136820737}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &617838414236832050
 MonoBehaviour:
   m_ObjectHideFlags: 0
