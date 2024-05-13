@@ -155,7 +155,7 @@ MonoBehaviour:
   playerPrefab: {fileID: 4819063447722417266, guid: d5d1e28c3e9eb1b4db8bc2036e5b0dfe, type: 3}
   currentPlayer: {fileID: 0}
   baseStats:
-    characterChangePath: VariantA
+    characterChangePath: A
     characterName: name
     maxHealth: 0
     speed: 5

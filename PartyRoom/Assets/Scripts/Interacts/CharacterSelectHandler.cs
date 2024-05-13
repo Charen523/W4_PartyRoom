@@ -10,14 +10,14 @@ public class CharacterSelectHandler : MonoBehaviour
 
     public Animator selectPanelAnim;
 
-    private GameObject player;
+    private PlayerData playerData;
     private Button[] playerButtons;
     
 
     // Start is called before the first frame update
     void Start()
     {
-        player = GameManager.instance.currentPlayer;
+        playerData = GameManager.instance.savePlayerData;
         playerButtons = new Button[characters.Length];
 
         for(int i = 0; i < characters.Length; i++)
@@ -58,6 +58,6 @@ public class CharacterSelectHandler : MonoBehaviour
         selectedPlayer.transform.SetAsLastSibling();
 
         //애니메이션과 연결할 폴더 이름 변경
-        player.GetComponent<PlayerDataHandler>().setCharacterImage(selectedPlayer.name);
+        playerData.characterChangePath = selectedPlayer.name;
     }
 }

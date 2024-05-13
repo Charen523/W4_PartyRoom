@@ -48,7 +48,6 @@ public class GameManager : MonoBehaviour
         if (currentPlayer != null)
         {
             DestroyPlayer();
-            Debug.Log("Destroyed");
         }
 
         if (currentPlayer == null)
@@ -83,7 +82,6 @@ public class GameManager : MonoBehaviour
 
     private void DestroyPlayer()
     {
-        savePlayerData = currentPlayer.GetComponent<PlayerDataHandler>().SavePlayerData();
         Destroy(currentPlayer);
         currentPlayer = null; //참조 제거
     }

@@ -116,7 +116,7 @@ GameObject:
   - component: {fileID: 2296073556396704981}
   - component: {fileID: 4676438027100768492}
   - component: {fileID: -6212702045082959694}
-  - component: {fileID: 7329443304114470239}
+  - component: {fileID: 7323167482086052746}
   - component: {fileID: 7866207534095872343}
   - component: {fileID: 2584998781189155579}
   - component: {fileID: 7888739644047956881}
@@ -246,7 +246,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ccde494086a6b1489597cd98035dd14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameTag: {fileID: 0}
 --- !u!114 &4676438027100768492
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -272,7 +271,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d27792f29deded488642054f65a87df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &7329443304114470239
+--- !u!114 &7323167482086052746
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -285,7 +284,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterRenderer: {fileID: 2799929144723235805}
-  characterAnimator: {fileID: 4144710693093019934}
+  animatorA: {fileID: 4144710693093019934}
+  otheranims:
+  - {fileID: 22100000, guid: 98a7ea31aba3fee47893a351a14be656, type: 2}
+  - {fileID: 22100000, guid: f9c5c9274349dae458d3252144a1b576, type: 2}
+  - {fileID: 22100000, guid: b3a5255d313f1b7418b70172d482c6f1, type: 2}
+  - {fileID: 22100000, guid: 5b8a3aa6258cebc43aacbe83f7aeefbe, type: 2}
 --- !u!114 &7866207534095872343
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -298,7 +302,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ccde494086a6b1489597cd98035dd14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameTag: {fileID: 5580106208855070341}
 --- !u!50 &2584998781189155579
 Rigidbody2D:
   serializedVersion: 4

@@ -26,15 +26,6 @@ public class PlayerDataHandler : MonoBehaviour
         return new PlayerData(currentStat);
     }
 
-    public void setCharacterImage(string imageFolder)
-    {
-        if (imageFolder != null)
-        {
-            currentStat.characterChangePath = imageFolder;
-            Debug.Log("Character image path updated to: " + imageFolder);
-        }
-    }
-
     public void setCharacterName(string characterName)
     {
         currentStat.characterName = characterName;
