@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TopDownAnimationController : MonoBehaviour
 {
@@ -7,6 +8,7 @@ public class TopDownAnimationController : MonoBehaviour
     [SerializeField] private AnimatorOverrideController[] otheranims;
 
     private TopDownController controller;
+    
 
     private bool IsWalk = false;
 
@@ -14,22 +16,23 @@ public class TopDownAnimationController : MonoBehaviour
     {
         controller = GetComponent<TopDownController>();
         animatorA = GetComponent<Animator>();
-        
+
         switch(GameManager.instance.savePlayerData.characterChangePath)
         {
             case "A":
-                break;
-            case "B":
                 animatorA.runtimeAnimatorController = otheranims[0];
                 break;
-            case "C":
+            case "B":
                 animatorA.runtimeAnimatorController = otheranims[1];
                 break;
-            case "D":
+            case "C":
                 animatorA.runtimeAnimatorController = otheranims[2];
                 break;
-            case "E":
+            case "D":
                 animatorA.runtimeAnimatorController = otheranims[3];
+                break;
+            case "E":
+                animatorA.runtimeAnimatorController = otheranims[4];
                 break;
             default:
                 Debug.LogError("characterChangePath의 이름이 틀림");
@@ -158,5 +161,32 @@ public class TopDownAnimationController : MonoBehaviour
                 return 2;
             }
         }
+    }
+
+    public void ChangeCharacterAnim()
+    {
+
+        switch (GameManager.instance.savePlayerData.characterChangePath)
+        {
+            case "A":
+                animatorA.runtimeAnimatorController = otheranims[0];
+                break;
+            case "B":
+                animatorA.runtimeAnimatorController = otheranims[1];
+                break;
+            case "C":
+                animatorA.runtimeAnimatorController = otheranims[2];
+                break;
+            case "D":
+                animatorA.runtimeAnimatorController = otheranims[3];
+                break;
+            case "E":
+                animatorA.runtimeAnimatorController = otheranims[4];
+                break;
+            default:
+                break;
+        }
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
