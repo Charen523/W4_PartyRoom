@@ -22,13 +22,16 @@ public class GameManager : MonoBehaviour
             instance = this;
             DontDestroyOnLoad(this.gameObject);
             ResetPlayerData();
-            SpawnPlayer();
-            
-            Debug.Log(savePlayerData.characterName);
         }
         else
         {
             Destroy(gameObject);
+            return;
+        }
+
+        if (currentPlayer == null)
+        {
+            SpawnPlayer(); //최초 플레이어 생성
         }
 
         SceneManager.sceneLoaded += OnSceneLoaded;
@@ -43,8 +46,15 @@ public class GameManager : MonoBehaviour
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         if (currentPlayer != null)
+        {
             DestroyPlayer();
-        SpawnPlayer();
+            Debug.Log("Destroyed");
+        }
+
+        if (currentPlayer == null)
+            SpawnPlayer();
+        else
+            Debug.LogError("플레이어 객체 삭제 오류");
     }
 
     private void ResetPlayerData()
@@ -56,8 +66,6 @@ public class GameManager : MonoBehaviour
             maxHealth = baseStats.maxHealth,
             speed = baseStats.speed
         };
-
-        Debug.Log(savePlayerData.characterName);
     }
 
     private void SpawnPlayer()
@@ -70,14 +78,13 @@ public class GameManager : MonoBehaviour
         if (SceneManager.GetActiveScene().name == "StartScene")
             currentPlayer.SetActive(false);
         else
-        {
-            currentPlayer.SetActive(true);  
-        }
+            currentPlayer.SetActive(true);
     }
 
     private void DestroyPlayer()
     {
         savePlayerData = currentPlayer.GetComponent<PlayerDataHandler>().SavePlayerData();
         Destroy(currentPlayer);
+        currentPlayer = null; //참조 제거
     }
 }
