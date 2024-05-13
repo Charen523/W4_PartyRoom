@@ -4288,7 +4288,6 @@ GameObject:
   - component: {fileID: 1040672516}
   - component: {fileID: 1040672518}
   - component: {fileID: 1040672517}
-  - component: {fileID: 1040672519}
   m_Layer: 5
   m_Name: UserList
   m_TagString: Untagged
@@ -4362,18 +4361,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1040672515}
   m_CullTransparentMesh: 1
---- !u!114 &1040672519
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1040672515}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 08f822dd571fd114394e123eee58c6e1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1061039327
 GameObject:
   m_ObjectHideFlags: 0
@@ -6287,6 +6274,7 @@ GameObject:
   - component: {fileID: 1385879884}
   - component: {fileID: 1385879883}
   - component: {fileID: 1385879885}
+  - component: {fileID: 1385879886}
   m_Layer: 5
   m_Name: SideBox
   m_TagString: Untagged
@@ -6312,7 +6300,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 437.17706, y: 0}
+  m_AnchoredPosition: {x: 552.4, y: 0}
   m_SizeDelta: {x: 114.4059, y: 423.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1385879883
@@ -6374,6 +6362,20 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1385879886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1385879881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08f822dd571fd114394e123eee58c6e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SidePanel: {fileID: 1385879881}
+  participant: {fileID: 1040672517}
 --- !u!1 &1396058172
 GameObject:
   m_ObjectHideFlags: 0
@@ -6948,7 +6950,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1499088168}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1385879886}
+        m_TargetAssemblyTypeName: ParticipantListText, Assembly-CSharp
+        m_MethodName: OnSidePanelClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1499088168
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15142,14 +15156,14 @@ GameObject:
   m_Component:
   - component: {fileID: 2060241587}
   - component: {fileID: 2060241586}
+  - component: {fileID: 2060241592}
   - component: {fileID: 2060241591}
   - component: {fileID: 2060241590}
-  - component: {fileID: 2060241592}
   - component: {fileID: 2060241588}
   - component: {fileID: 2060241589}
   m_Layer: 0
   m_Name: MeowCatNPC
-  m_TagString: Player
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
