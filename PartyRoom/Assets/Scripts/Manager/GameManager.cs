@@ -9,10 +9,11 @@ public class GameManager : MonoBehaviour
     public static GameManager instance { get; private set; }
 
     public GameObject playerPrefab;
-    private GameObject currentPlayer;
+    public GameObject currentPlayer;
 
     [SerializeField] private PlayerData baseStats;
-    private PlayerData savePlayerData;
+    
+    public PlayerData savePlayerData;
 
     private void Awake()
     {
@@ -21,6 +22,9 @@ public class GameManager : MonoBehaviour
             instance = this;
             DontDestroyOnLoad(this.gameObject);
             ResetPlayerData();
+            SpawnPlayer();
+            
+            Debug.Log(savePlayerData.characterName);
         }
         else
         {
@@ -52,6 +56,8 @@ public class GameManager : MonoBehaviour
             maxHealth = baseStats.maxHealth,
             speed = baseStats.speed
         };
+
+        Debug.Log(savePlayerData.characterName);
     }
 
     private void SpawnPlayer()
@@ -59,6 +65,14 @@ public class GameManager : MonoBehaviour
         currentPlayer = Instantiate(playerPrefab);
         currentPlayer.transform.position = new Vector3(0, 0, 0); // 위치 초기화
         currentPlayer.GetComponent<PlayerDataHandler>().LoadPlayerData(savePlayerData);
+        currentPlayer.GetComponent<PlayerDataHandler>().setCharacterName(savePlayerData.characterName);
+
+        if (SceneManager.GetActiveScene().name == "StartScene")
+            currentPlayer.SetActive(false);
+        else
+        {
+            currentPlayer.SetActive(true);  
+        }
     }
 
     private void DestroyPlayer()

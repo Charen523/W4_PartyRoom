@@ -30,7 +30,6 @@ public class PlayerInputController : TopDownController
     public void OnLook(InputValue value)
     {
         Vector2 newAim = value.Get<Vector2>();
-        Debug.Log(newAim);
         Vector2 worldPos = _camera.ScreenToWorldPoint(newAim);
         newAim = (worldPos - (Vector2)transform.position).normalized;
 

@@ -4,20 +4,21 @@ using UnityEngine.UI;
 public class PlayerDataHandler : MonoBehaviour
 {
     public PlayerData currentStat {  get; private set; }
-    public GameObject nameTag;
 
     private Text nameText;
     private RectTransform nameRect;
 
     void Awake()
     {
+        Transform nameTag = transform.Find("Canvas/NameBox/NameTxt");
+    
         nameText = nameTag.GetComponent<Text>();
         nameRect = nameTag.GetComponent<RectTransform>();   
     }
 
     public void LoadPlayerData(PlayerData data)
     {
-        data = new PlayerData(currentStat);
+        currentStat = new PlayerData(data);
     }
 
     public PlayerData SavePlayerData()
@@ -39,7 +40,5 @@ public class PlayerDataHandler : MonoBehaviour
         currentStat.characterName = characterName;
         nameText.text = characterName;
         UIUtility.SetTextRectSize(nameText, nameRect);
-
-        Debug.Log("Character name updated to: " + characterName);
     }
 }

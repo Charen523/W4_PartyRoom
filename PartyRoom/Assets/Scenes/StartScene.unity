@@ -1477,7 +1477,6 @@ MonoBehaviour:
   - {fileID: 699085830}
   - {fileID: 858994208}
   activeSelect: {fileID: 1321155670}
-  player: {fileID: 4819063447722417266, guid: d5d1e28c3e9eb1b4db8bc2036e5b0dfe, type: 3}
   selectPanelAnim: {fileID: 1423505671}
 --- !u!1 &1189076905
 GameObject:
@@ -2163,11 +2162,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerPrefab: {fileID: 4819063447722417266, guid: d5d1e28c3e9eb1b4db8bc2036e5b0dfe, type: 3}
+  currentPlayer: {fileID: 4819063447722417266, guid: d5d1e28c3e9eb1b4db8bc2036e5b0dfe, type: 3}
   baseStats:
     characterChangePath: VariantE
     characterName: Anonymous
     maxHealth: 0
     speed: 5
+  savePlayerData:
+    characterChangePath: 
+    characterName: 
+    maxHealth: 0
+    speed: 0
 --- !u!4 &1573631624
 Transform:
   m_ObjectHideFlags: 0
@@ -3084,7 +3089,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nameInput: {fileID: 875493925}
-  playerStatHandler: {fileID: 2296073556396704981, guid: d5d1e28c3e9eb1b4db8bc2036e5b0dfe, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

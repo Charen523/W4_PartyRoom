@@ -7,15 +7,17 @@ public class CharacterSelectHandler : MonoBehaviour
 {
     public GameObject[] characters;
     public GameObject activeSelect;
-    public GameObject player;
 
     public Animator selectPanelAnim;
 
+    private GameObject player;
     private Button[] playerButtons;
+    
 
     // Start is called before the first frame update
     void Start()
     {
+        player = GameManager.instance.currentPlayer;
         playerButtons = new Button[characters.Length];
 
         for(int i = 0; i < characters.Length; i++)
