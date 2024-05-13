@@ -3,7 +3,7 @@ using UnityEngine;
 public class PlayerStatHandler : MonoBehaviour
 {
     [SerializeField] private PlayerStat baseStats;
-    public PlayerStat currentStat { get; private set; }
+    public PlayerStat currentStat {  get; private set; }
 
     void Awake()
     {
@@ -26,11 +26,13 @@ public class PlayerStatHandler : MonoBehaviour
         if (imageFolder != null)
         {
             currentStat.characterChangePath = imageFolder;
+            Debug.Log("Character image path updated to: " + imageFolder);
         }
     }
 
     public void setCharacterName(string characterName)
     {
-        currentStat.characterName = characterName;  
+        currentStat.characterName = characterName;
+        Debug.Log("Character name updated to: " + characterName);
     }
 }

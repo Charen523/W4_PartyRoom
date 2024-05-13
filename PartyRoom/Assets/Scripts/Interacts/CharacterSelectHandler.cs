@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CharacterSelectManager : MonoBehaviour
+public class CharacterSelectHandler : MonoBehaviour
 {
     public GameObject[] characters;
     public GameObject activeSelect;

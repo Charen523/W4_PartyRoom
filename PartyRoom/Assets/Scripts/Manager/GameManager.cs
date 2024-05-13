@@ -7,26 +7,21 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance { get; private set; }
 
+    public GameObject player;
+
     private void Awake()
     {
         if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(gameObject);
+            DontDestroyOnLoad(this.gameObject);
+
+            if (player != null)
+                DontDestroyOnLoad(player);
         }
         else
         {
             Destroy(gameObject);
         }
-    }
-
-    private void Start()
-    {
-        
-    }
-
-    private void Update()
-    {
-        
     }
 }

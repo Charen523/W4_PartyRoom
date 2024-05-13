@@ -5,11 +5,13 @@ using UnityEngine.UI;
 
 public class NameInputHandler : MonoBehaviour
 {
-    public InputField nameInputField;
+    public GameObject nameInput;
     public PlayerStatHandler playerStatHandler;
 
     public void SetPlayerName()
     {
+        InputField nameInputField = nameInput.GetComponent<InputField>();
+
         if (playerStatHandler == null)
         {
             Debug.LogError("PlayerStatHandler가 NameInputHandler의 인스펙터에 할당되지 않음!");
