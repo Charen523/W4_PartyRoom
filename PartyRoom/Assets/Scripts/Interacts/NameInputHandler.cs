@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class NameInputHandler : MonoBehaviour
 {
     public GameObject nameInput;
-    public PlayerStatHandler playerStatHandler;
+    public PlayerDataHandler playerStatHandler;
 
     public void SetPlayerName()
     {

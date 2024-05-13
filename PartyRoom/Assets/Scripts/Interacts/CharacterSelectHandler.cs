@@ -56,6 +56,6 @@ public class CharacterSelectHandler : MonoBehaviour
         selectedPlayer.transform.SetAsLastSibling();
 
         //애니메이션과 연결할 폴더 이름 변경
-        player.GetComponent<PlayerStatHandler>().setCharacterImage(selectedPlayer.name);
+        player.GetComponent<PlayerDataHandler>().setCharacterImage(selectedPlayer.name);
     }
 }
