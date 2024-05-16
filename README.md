@@ -17,9 +17,6 @@
 - 블로그: https://better-constructor123.tistory.com
 
 ---
-```
-asdf
-```
 
 ### ✨프로젝트  
 
